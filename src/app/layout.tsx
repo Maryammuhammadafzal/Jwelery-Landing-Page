@@ -1,15 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Catamaran, Castoro_Titling , Carattere } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const catamaran = Catamaran({
+  variable: "--font-catamaran",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const castoroTitling = Castoro_Titling({
+  variable: "--font-castoro-titling",
   subsets: ["latin"],
+  weight: '400',
+  display : 'swap'
+});
+
+const carattere = Carattere({
+  variable: "--font-carattere",
+  subsets: ["latin"],
+  weight: '400',
+  display : 'swap'
 });
 
 export const metadata: Metadata = {
@@ -25,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${catamaran.variable} ${castoroTitling.variable} ${carattere.variable} antialiased`}
       >
         {children}
       </body>
