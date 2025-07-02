@@ -2,6 +2,7 @@ import Comparision from "@/components/Comparision";
 import AboutPage from "./about/page";
 import HeroPage from "./hero/page";
 import OccassionPage from "./occassion/page";
+import TestimonialPage from "./testimonial/page";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutPage/>
       <OccassionPage/>
       <Comparision/>
+      <TestimonialPage/>
     </div>
   );
 }
