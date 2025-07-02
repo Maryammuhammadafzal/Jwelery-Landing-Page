@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutPage = () => {
@@ -30,9 +31,18 @@ const AboutPage = () => {
                 height={400}
                 className="object-cover w-full h-full transition-transform"
               />
-              <div className="card-content bg-none border-0  absolute group-hover:flex top-0 left-0w-full h-full hidden justify-center items-center p-2">
-                <div className="box">
-                    <div className="draw"></div>
+              <div className="card-content bg-black/30 border-0  absolute group-hover:flex top-0 left-0 w-full h-full hidden justify-center items-center p-3">
+                <div className="box relative w-full h-full bg-transparent flex items-center justify-center">
+                    <div className="content w-full h-full flex flex-col justify-center items-center text-black">
+                        <div className="flex flex-col justify-center items-center h-[50%] gap-3">
+                            <h3 className="text-white text-2xl font-sans">Simple Earrings</h3>
+                            <p className="text-white font-sans">$42.79</p>
+                        </div>
+                        <div className="flex h-[50%] text-white items-end justify-evenly gap-3 py-3 w-full">
+                            <Link href='/' className="card-link relaive bg-transparent h-fit w-fit font-sans">Quick View</Link>
+                            <Link href='/' className="card-link2 relaive bg-transparent h-fit w-fit font-sans">Add To Cart</Link>
+                        </div>
+                    </div>
                 </div>
               </div>
              

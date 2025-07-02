@@ -52,9 +52,9 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: #FAD4C0;
+  --primary: #fad4c0;
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: #CFAF95;
+  --secondary: #cfaf95;
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -123,85 +123,97 @@
 }
 
 @theme {
-  --breakpoint-xs : 30rem;
+  --breakpoint-xs: 30rem;
 }
 
-.card-content:hover .box {
-  background: none;
-  border: 0;
-  box-sizing: border-box;
-  margin: 1em;
-  padding: 1em 2em;
-  
-  /* // Using inset box-shadow instead of border for sizing simplicity */
-  box-shadow: inset 0 0 0 2px black;
-  color: black;
-  font-size: inherit;
-  font-weight: 700;
+.card-content:hover .box::before {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  animation: border-top-right 2s ease-in forwards;
+}
+.card-content:hover .box::after {
+  content: "";
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  animation: border-bottom-left 2s ease-in forwards;
+}
 
-  /* // Required, since we're setting absolute on pseudo-elements */
-  position: relative;
-  vertical-align: middle;
-
-  &::before,
-  &::after {
-    box-sizing: inherit;
-    content: '';
-    position: absolute;
+@keyframes border-top-right {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 100%;
+    height: 0px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes border-bottom-left {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    width: 100%;
+    height: 0px;
+  }
+  100% {
     width: 100%;
     height: 100%;
   }
 }
 
+.card-link::before {
+  content: "";
+  position: absolute;
+  bottom: 12;
+  left: 10;
+  width: 0;
+  height: 0px;
+  border-bottom: 1px solid white;
+  animation: border-bottom-width 1s ease-in forwards;
+}
 
-.card-content:hover .draw {
-    transition: color 0.25s;
-
-  &::before,
-  &::after {
-    /* // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts */
-    border: 2px solid transparent;
-    width: 0;
-    height: 0;
+@keyframes border-bottom-width {
+  0% {
+   width: 0px; height: 0px;
   }
-
-  /* // This covers the top & right borders (expands right, then down) */
-  &::before {
-    top: 0;
-    left: 0;
+  100% {
+    width: 110px; height: 0px;
   }
+}
 
-  /* // And this the bottom & left borders (expands left, then up) */
-  &::after {
-    bottom: 0;
-    right: 0;
-  }
-  
-  &:hover {
-    color: #CFAF95;
-  }
+.card-link2::before {
+  content: "";
+  position: absolute;
+  bottom: 12;
+  left: 52%;
+  width: 0;
+  height: 0px;
+  border-bottom: 1px solid white;
+  animation: border-bottom-width 1s ease-in forwards;
+}
 
-  /* // Hover styles */
-  &:hover::before,
-  &:hover::after {
-    width: 100%;
-    height: 100%;
+@keyframes border-bottom-width {
+  0% {
+   width: 0px; height: 0px;
   }
-
-  &:hover::before {
-    border-top-color: #CFAF95;  /* // Make borders visible */
-    border-right-color: #CFAF95;
-    transition:
-      width 0.25s ease-out, /* // Width expands first */
-      height 0.25s ease-out 0.25s; /* // And then height */
-  }
-
-  &:hover::after {
-    border-bottom-color: #CFAF95; /* // Make borders visible */
-    border-left-color: #CFAF95;
-    transition:
-      border-color 0s ease-out 0.5s, /* // Wait for ::before to finish before showing border */
-      width 0.25s ease-out 0.5s, /* // And then exanding width */
-      height 0.25s ease-out 0.75s; /* // And finally height */
+  100% {
+    width: 120px; height: 0px;
   }
 }
