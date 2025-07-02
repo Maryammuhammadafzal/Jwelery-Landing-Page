@@ -185,7 +185,7 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-10 w-[50px]  bg-[#FFF1EA] text-black",
+        "absolute [&_svg:not([class*='size-'])]:size-8  w-[60px] mr-2  bg-[#FFF1EA] text-secondary",
         orientation === "horizontal"
           ? "top-1/2 -left-12 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
@@ -215,7 +215,7 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "size-10 w-[50px]  bg-[#FFF1EA] text-black",
+        "w-[60px] ml-2 [&_svg:not([class*='size-'])]:size-8 bg-[#FFF1EA] text-secondary",
         orientation === "horizontal"
           ? "top-1/2 -right-12 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",

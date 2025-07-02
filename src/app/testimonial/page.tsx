@@ -40,12 +40,12 @@ const TestimonialPage = () => {
           </h2>
         </div>
 
-        <div className="w-full h-auto p-3 flex justify-evenly gap-14 items-center">
-          <Carousel className="w-[80%] mx-auto justify-center flex items-center">
+        <div className="w-full h-auto flex justify-evenly gap-14 items-center">
+          <Carousel className="lg:w-[80%] w-[98%] mx-auto justify-center flex items-center">
             <CarouselContent className="w-full mx-auto">
               {testimonial_data.map((item, index) => (
-                <CarouselItem className="w-full px-20 mx-auto flex justify-center items-center flex-col">
-                  <div className="w-full flex flex-col bg-[#FFF1EA] gap-4 justify-center items-center min-h-[300px] ">
+                <CarouselItem className="w-full lg:px-20 md:px-14 sm:px-10 px-6 mx-auto flex justify-center items-center flex-col">
+                  <div className="w-full flex flex-col bg-[#FFF1EA] gap-4 justify-center items-center p-3 min-h-[300px] ">
                     <Image
                       src="/images/quote.png"
                       alt={`quote-icon`}
@@ -54,7 +54,7 @@ const TestimonialPage = () => {
                       className=""
                     />
 
-                    <p className="max-w-2xl text-center text-xl leading-8">
+                    <p className="max-w-2xl text-center md:text-xl sm:text-lg text-base sm:leading-6 md:leading-8">
                       {`${item.testimonial}`}
                     </p>
                     <div className="flex flex-col gap-1 justify-center items-center m-2">
@@ -73,8 +73,8 @@ const TestimonialPage = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="max-sm:hidden flex" />
+            <CarouselNext  className="max-sm:hidden flex" />
           </Carousel>
         </div>
       </div>
