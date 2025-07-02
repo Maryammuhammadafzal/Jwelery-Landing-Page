@@ -38,8 +38,8 @@ const OccassionPage = () => {
 
         <div className="cards flex w-full h-auto flex-col justify-center items-center">
           {occassion_data.map((item, index) => (
-            <div key={index} className="flex w-full h-auto ">
-              <div className={`md:w-[50%] bg-[#FFF1EA] px-3 max-sm:px-3 h-auto w-full flex justify-center items-center gap-8 flex-col ${index === 1 && 'order-2' } ${index === 3 && 'order-2' }`}>
+            <div key={index} className="flex md:flex-row flex-col w-full h-auto ">
+              <div className={`md:w-[50%] bg-[#FFF1EA] px-3 max-md:p-3 h-[350px] w-full flex justify-center items-center gap-8 flex-col ${index === 1 && 'md:order-2' } ${index === 3 && 'md:order-2' }`}>
                 <div className="max-w-xl flex flex-col gap-4">
                   <h6 className="sm:text-2xl text-xl font-sub text-secondary ">
                     {item.subTitle}
@@ -57,13 +57,13 @@ const OccassionPage = () => {
                   </div>
                 </div>
               </div>
-              <div className={`md:w-[50%] w-full  md:h-full flex h-[50%] ${index === 1 && 'order-1' } ${index === 3 && 'order-1' }`}>
+              <div className={`md:w-[50%] w-full  md:h-full flex h-[50%] ${index === 1 && 'md:order-1' } ${index === 3 && 'md:order-1' }`}>
                 <Image
                   src={item.image}
                   alt={`occassion-image-${index+1}`}
                   width={400}
                   height={400}
-                  className="object-cover w-full h-[500px] md:object-center object-bottom"
+                  className="object-cover w-full md:h-[500px] h-[350px] md:object-center object-bottom"
                 />
               </div>
             </div>
