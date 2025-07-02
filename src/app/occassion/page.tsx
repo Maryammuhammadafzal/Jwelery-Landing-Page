@@ -39,13 +39,13 @@ const OccassionPage = () => {
         <div className="cards flex w-full h-auto flex-col justify-center items-center">
           {occassion_data.map((item, index) => (
             <div key={index} className="flex w-full h-auto ">
-              <div className="md:w-[50%] bg-[#FFF1EA] max-sm:px-3 md:h-auto h-[50%] w-full flex justify-center items-center gap-8 flex-col">
+              <div className={`md:w-[50%] bg-[#FFF1EA] px-3 max-sm:px-3 h-auto w-full flex justify-center items-center gap-8 flex-col ${index === 1 && 'order-2' } ${index === 3 && 'order-2' }`}>
                 <div className="max-w-xl flex flex-col gap-4">
                   <h6 className="sm:text-2xl text-xl font-sub text-secondary ">
-                    Elegance Redefined
+                    {item.subTitle}
                   </h6>
-                  <h3 className="font-sans lg:leading-14 md:leading-12 sm:leading-10 leading-8 lg:text-5xl sm:text-4xl xs:text-3xl text-2xl  text-secondary-foreground">
-                    Experience the Timeless Elegance of Ethereal Grace Jewelry
+                  <h3 className="font-sans lg:leading-12 md:leading-10  leading-8 lg:text-4xl sm:text-3xl xs:text-2xl text-xl  text-secondary-foreground">
+                    {item.title}
                   </h3>
                   <div className="buttons flex gap-5 flex-wrap ">
                     <Button className="text-secondary-foreground bg-secondary border border-secondary rounded-none font-mono px-7 py-5">
@@ -57,13 +57,13 @@ const OccassionPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-[50%] w-full  md:h-full h-[50%] ">
+              <div className={`md:w-[50%] w-full  md:h-full flex h-[50%] ${index === 1 && 'order-1' } ${index === 3 && 'order-1' }`}>
                 <Image
-                  src="/images/occassion-image1.jpg"
-                  alt="home-image"
+                  src={item.image}
+                  alt={`occassion-image-${index+1}`}
                   width={400}
                   height={400}
-                  className="object-cover w-full h-full md:object-center object-bottom"
+                  className="object-cover w-full h-[500px] md:object-center object-bottom"
                 />
               </div>
             </div>
