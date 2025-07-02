@@ -42,7 +42,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div></div>
+        <div className="w-full flex justify-center items-center">
+          © 2021 all copyright reserved. All Rights Reserved. Rootlet Solutions
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Catamaran, Castoro_Titling , Carattere } from "next/font/google";
+import { Catamaran, Castoro_Titling, Carattere } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
+import HeroPage from "./hero/page";
 
 const catamaran = Catamaran({
   variable: "--font-catamaran",
@@ -10,15 +12,15 @@ const catamaran = Catamaran({
 const castoroTitling = Castoro_Titling({
   variable: "--font-castoro-titling",
   subsets: ["latin"],
-  weight: '400',
-  display : 'swap'
+  weight: "400",
+  display: "swap",
 });
 
 const carattere = Carattere({
   variable: "--font-carattere",
   subsets: ["latin"],
-  weight: '400',
-  display : 'swap'
+  weight: "400",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +38,9 @@ export default function RootLayout({
       <body
         className={`${catamaran.variable} ${castoroTitling.variable} ${carattere.variable} antialiased`}
       >
+        <HeroPage />
         {children}
+        <Footer />
       </body>
     </html>
   );
