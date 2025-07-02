@@ -1,5 +1,6 @@
 import AboutPage from "./about/page";
 import HeroPage from "./hero/page";
+import OccassionPage from "./occassion/page";
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="w-full h-auto overflow-hidden bg-muted">
       <HeroPage/>
       <AboutPage/>
+      <OccassionPage/>
     </div>
   );
 }
