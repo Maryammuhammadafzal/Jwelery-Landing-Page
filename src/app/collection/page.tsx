@@ -1,10 +1,9 @@
+import MySlider from '@/components/Slider'
 import React from 'react'
 
 const CollectionPage = () => {
   return (
-    <div>
-      
-    </div>
+    <MySlider/>
   )
 }
 

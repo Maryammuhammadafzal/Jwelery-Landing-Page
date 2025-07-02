@@ -17,11 +17,10 @@ const MySlider = () => {
   const settings = {
     dots: false,
     speed: 500,
-    slidesToShow: 6, // Reduced to ensure spacing fits
+    slidesToShow: 6, 
     slidesToScroll: 6,
     initialSlide: 0,
     centerMode: true,
-    //centerPadding: '20px', // Adjusted for spacing
     infinite: true,
     autoplay: true,
     autoplaySpeed: 1000,
