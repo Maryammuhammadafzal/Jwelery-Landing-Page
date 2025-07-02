@@ -18,39 +18,39 @@ const TestimonialPage = () => {
           </h2>
         </div>
 
-        <div className="w-full h-auto p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-evenly gap-14 items-center">
-          <Carousel>
-            <CarouselContent>
-              <CarouselItem>
-                <div className="w-[60%] flex flex-col gap-4 justify-center items-center h-auto min-h-[300px] ">
+        <div className="w-full h-auto p-3 flex justify-evenly gap-14 items-center">
+          <Carousel className="w-[60%] mx-auto justify-center flex items-center">
+            <CarouselContent className="w-full">
+              <CarouselItem className="w-full mx-3 bg-[#FFF1EA] flex justify-center items-center flex-col">
+                <div className="w-full flex flex-col gap-4 justify-center items-center min-h-[300px] ">
                   <Image
                     src="/images/quote.png"
                     alt={`quote-icon`}
-                    width={40}
-                    height={40}
+                    width={60}
+                    height={60}
                     className=""
                   />
-                </div>
-                <p className="max-w-2xl text-center text-xl leading-10 p-2">
+                
+                <p className="max-w-2xl text-center text-xl leading-8">
                   "I’ve never felt more beautiful than when wearing my necklace
                   from Ethereal Grace Jewelry. The craftsmanship is
                   extraordinary."
                 </p>
                 <div className="flex flex-col gap-1 justify-center items-center m-2">
-                  <h5 className="font-mono text-3xl">Sophia Grace</h5>
+                  <h5 className="font-sub text-3xl text-secondary">Sophia Grace</h5>
                   <Image
                     src="/images/border-bottom.png"
                     alt={`border-vector`}
-                    width={40}
-                    height={10}
+                    width={100}
+                    height={30}
                     className=""
                   />
                 </div>
+                </div>
               </CarouselItem>
-              {/* <CarouselItem>...</CarouselItem>
-              <CarouselItem>...</CarouselItem> */}
+             
             </CarouselContent>
-            <CarouselPrevious />
+            <CarouselPrevious  />
             <CarouselNext />
           </Carousel>
         </div>
