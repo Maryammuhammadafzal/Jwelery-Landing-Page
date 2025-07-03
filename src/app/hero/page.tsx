@@ -7,7 +7,7 @@ const HeroPage = () => {
   return (
     <div className='flex w-full md:h-screen min-h-screen md:mb-20 sm:mb-14 mb-8 justify-center items-center'>
       <div className='w-full h-full realtive'>
-        <div className='fixed top-0 left-0 w-full h-[100px] z-50 flex justify-center items-center'>
+        <div className='fixed top-0 left-0 w-full h-[100px]  z-50 flex justify-center items-center'>
             <Header/>
         </div>
         <div className='absolute top-0 pt-10 left-0 flex justify-center items-center w-full h-full'>
