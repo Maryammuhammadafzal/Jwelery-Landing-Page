@@ -5,7 +5,8 @@ import React from 'react'
 
 const HeroPage = () => {
   return (
-    <div className='flex w-full md:h-screen min-h-screen md:mb-20 sm:mb-14 mb-8 justify-center items-center'>
+    <div className='w-full h-auto flex justify-center items-center bg-muted'>
+      <div className='flex w-full md:h-screen min-h-screen md:mb-20 sm:mb-14 mb-8 justify-center items-center'>
       <div className='w-full h-full realtive'>
         <div className='fixed top-0 left-0 w-full h-[100px]  z-50 flex justify-center items-center'>
             <Header/>
@@ -28,6 +29,7 @@ const HeroPage = () => {
             </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

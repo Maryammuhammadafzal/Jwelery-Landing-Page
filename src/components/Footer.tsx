@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4 w-auto h-auto">
-            <h3 className="lg:text-2xl md:text-xl text-lg">Products</h3>
+            <h3 className="lg:text-2xl md:text-xl text-lg text-secondary font-sans">Products</h3>
             <ul className="flex flex-col gap-3">
               <li className="md:text-xl text-lg">Earrings</li>
               <li className="md:text-xl text-lg">Neckless</li>
@@ -24,7 +24,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col gap-4 w-auto h-auto">
-            <h3 className="lg:text-2xl md:text-xl text-lg">Pages</h3>
+            <h3 className="lg:text-2xl md:text-xl text-lg text-secondary font-sans">Pages</h3>
             <ul className="flex flex-col gap-3">
               <li className="md:text-xl text-lg">Home</li>
               <li className="md:text-xl text-lg">About Us</li>
@@ -34,7 +34,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col max-w-sm gap-4 w-auto h-auto">
-            <h3 className="lg:text-2xl md:text-xl text-lg">Contact Us</h3>
+            <h3 className="lg:text-2xl md:text-xl text-lg text-secondary font-sans">Contact Us</h3>
             <ul className="flex flex-col gap-3">
               <li className="md:text-xl text-lg">2972 Westheimer Rd. Santa Ana, Illinois 85486</li>
               <li className="md:text-xl text-lg">(209) 555-0104</li>
@@ -42,7 +42,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full flex text-center justify-center items-center">
           © 2021 all copyright reserved. All Rights Reserved. Rootlet Solutions
         </div>
       </div>
