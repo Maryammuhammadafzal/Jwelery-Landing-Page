@@ -5,7 +5,7 @@ import { MenuIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <div className="w-full h-full  bg-secondary rounded-br-2xl flex justify-center items-center rounded-bl-2xl">
+    <div className="w-full h-full  bg-secondary rounded-br-[40px] flex justify-center items-center rounded-bl-[40px]">
       <div className="lg:w-[90%] w-full px-3 h-full flex justify-between items-center">
         <a href="/" className="logo w-auto h-auto">
           <Image src="/images/logo.png" alt="logo" width={100} height={100} />

@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="flex flex-col gap-6 justify-center items-center w-full h-full">
         <div className="flex flex-wrap gap-4 justify-evenly w-full h-auto  py-10">
           <div className="logo flex w-auto max-w-sm h-auto flex-col gap-4">
-            <Image src="/images/logo.png" alt="logo" width={100} height={100} />
-            <p className="xl:text-xl lg:text-lg text-base xl:leading-14 lg:leading-12 leading-10">
+            <Image src="/images/footer-logo.png" alt="logo" width={100} height={100} />
+            <p className="xl:text-xl lg:text-lg text-base xl:leading-8 lg:leading-6 leading-5">
               Explore our collection in person at [Store Location(s)], or browse
               online and enjoy the convenience of secure shopping and shipping.
             </p>
